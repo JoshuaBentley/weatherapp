@@ -16,25 +16,27 @@ var weather = {
        
 },
     displayWeather: function(data) {
-       var location = data;
+       var location = data.city.name
        var temp = data.list[0].main.temp;
        var conditions = data.list[1].weather[0].description;
        var minTemp = data.list[0].main.temp_min;
        var maxTemp = data.list[0].main.temp_max;
        var windSpeed = data.list[3].wind.speed;
-       var icon = data.list[1].weather[0].icon
+      //  var icon = data.list[1].weather[0].icon
        console.log(conditions);
        document.querySelector(".location1").innerText = location;
        document.querySelector(".tempature1").innerText = temp + "°F"; 
        document.querySelector(".weatherConditions1").innerText = conditions;
-       document.querySelector(".minTemp1").innerText = minTemp;
-       document.querySelector(".maxTemp1").innerText = maxTemp;
-       document.querySelector(".windSpeed1").innerText = windSpeed;
-       document.querySelector(".icon") = icon;
+       document.querySelector(".minTemp1").innerText = minTemp + "°F";
+       document.querySelector(".maxTemp1").innerText = maxTemp + "°F";
+       document.querySelector(".windSpeed1").innerText = windSpeed + "mph";
+      //  document.querySelector(".icon") = " http://openweathermap.org/img/wn/" + icon;
 
     },
     search: function() {
-      this.getWeather(document.querySelector(".search").value);
+        // var search = document.querySelector(".search");
+        this.getWeather(document.querySelector("input").value);
+        console.log("working")
     }
 }
 
