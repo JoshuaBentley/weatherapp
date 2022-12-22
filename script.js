@@ -32,6 +32,7 @@ var weather = {
        document.querySelector('.maxTemp1').innerText = maxTemp + '°F';
        document.querySelector('.windSpeed1').innerText = windSpeed + 'mph';
        document.querySelector('img').src = 'http://openweathermap.org/img/wn/' + icon + "@2x.png";
+       document.querySelector('div.hide').classList.remove('hide')
 
     },
     search: function() {

@@ -8,3 +8,16 @@ header {
     justify-content: space-between;
 }
 
+.card {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+   
+}
+.listStyle {
+    list-style: none;
+}
+
+.hide {
+    display: none;
+}
