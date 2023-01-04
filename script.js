@@ -17,6 +17,7 @@ var weather = {
 },
     displayWeather: function(data) {
        var locationCity = data.city.name
+       var currentDate = data.list[0].dt_txt
        var locationCountry = data.city.country 
        var temp = data.list[0].main.temp;
        var conditions = data.list[1].weather[0].description;
@@ -25,6 +26,7 @@ var weather = {
        var windSpeed = data.list[3].wind.speed;
        var icon = data.list[1].weather[0].icon
        console.log(conditions);
+       document.querySelector('.date1').innerText = 'Date: ' + currentDate;
        document.querySelector('.location1').innerText = locationCity + ', ' + locationCountry;
        document.querySelector('.tempature1').innerText = temp + '°F'; 
        document.querySelector('.weatherConditions1').innerText = conditions;
